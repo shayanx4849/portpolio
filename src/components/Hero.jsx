@@ -89,7 +89,7 @@ export default function Hero() {
 
           <div className="relative w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] overflow-hidden">
             <img
-              src="../public/hero.jpg"
+              src="/hero.jpg"
               alt="Shayan, MERN stack developer"
               className="w-full h-full rounded-full object-cover object-center"
             />
