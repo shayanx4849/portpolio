@@ -12,11 +12,14 @@ const FIELD =
 
 export default function Contact() {
   const [status, setStatus] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const form = e.currentTarget;
     const values = Object.fromEntries(new FormData(form));
+
     setStatus("Sending...");
 
     const formData = {
@@ -25,7 +28,7 @@ export default function Contact() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
